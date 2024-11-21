@@ -65,6 +65,23 @@ def get_experiment_setting(experiment):
         setting = {"dataframe": PATH_DATAFRAME_TRANSFERABILITY_CLASSIFICATION + "CGI_HRDC_Task2.csv",
                    "task": "classification",
                    "targets": {"no hypertensive retinopathy": 0, "hypertensive retinopathy": 1}}
+    
+    elif experiment == "RIADD":
+        # Fichier CSV unique pour toutes les partitions
+        setting = {
+            "dataframe": PATH_DATAFRAME_TRANSFERABILITY_CLASSIFICATION + "RIADD.csv",  # Fichier unique pour tout le dataset
+            "task": "classification",  # Type de tâche
+            "targets": {
+                "Normal": 0,
+                "Diabetic retinopathy": 1,
+                "Glaucoma": 2,
+                "Cataract": 3,
+                "Age-related macular degeneration": 4,
+                "Hypertensive retinopathy": 5,
+                "Pathological myopia": 6,
+                "Other conditions": 7
+            }
+        }
 
     else:
         setting = None

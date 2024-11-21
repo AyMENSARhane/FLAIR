@@ -170,7 +170,8 @@ def main():
                              'zero_shot -')
 
     # Model base weights and architecture
-    parser.add_argument('--weights_path', default=None, help='./local_data/results/pretraining/resnet_v2_epoch15.pth')
+    # parser.add_argument('--weights_path', default=None, help='./local_data/results/pretraining/resnet_v2_epoch15.pth')
+    parser.add_argument('--weights_path', default=None, help='/content/FLAIR/flair/modeling/flair_resnet/flair_resnet.pth')
     parser.add_argument('--load_weights', default=True, type=lambda x: (str(x).lower() == 'true'))
     parser.add_argument('--init_imagenet', default=True, type=lambda x: (str(x).lower() == 'true'))
     parser.add_argument('--architecture', default='resnet_v1', help='resnet_v1 -- efficientnet')
